@@ -1,5 +1,16 @@
 //首页css
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 *{
+
 	margin: 0;
 	padding: 0;
 }
@@ -101,7 +112,6 @@ header .banner-right a{
 	font-size: 14px;
 }
 header .banner-right{
-	
 	height: 60px;
 	width: 7%;
 	display: inline-block;
@@ -157,10 +167,12 @@ header .banner-right:hover .move{
 	margin-bottom: 60px;
 }
 #section-1 .mes span a{
+	margin: 0;
 	text-decoration: none;
 	color: #fff;
 }
 #section-1 .mes span{
+	margin: 0;
     width: 300px;
     height: 60px;
     display: inline-block;
@@ -169,27 +181,31 @@ header .banner-right:hover .move{
     font-size: 28px;
     background: #E53C3C;
     cursor: pointer;
-    
+
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
 #section-1 .mes span:hover{
-    background: #E31212;
+	margin: 0;
+    background: #E32121;
     border-radius: 3px;
 }
 #section-2{
+	margin: 0;
 	width: 100%;
 	height: 240px;
 	font-size: 0;
 }
 #section-2 .cell{
+	margin: 0;
 	width: 25%;
 	display: inline-block;
 	position: relative;
 	top: 0;
 }
 #section-2 .cell .img{
+	margin: 0;
 	width: 100%;
 	height: 150px;
 	display: inline-block;
@@ -197,12 +213,14 @@ header .banner-right:hover .move{
 	text-align: center;
 }
 #section-2 .cell .img img{
+	margin: 0;
 	position: relative;
 	top: 30px;
 	width: 100px;
 	height: 100px;
 }
 #section-2 .cell .mes{
+	margin: 0;
 	width: 100%;
 	height: 50px;
 	font-size: 15px;
@@ -215,18 +233,22 @@ header .banner-right:hover .move{
 	transition: all 0.4s ease-in-out;
 }
 #section-2 .cell:hover .mes{
+	margin: 0;
 	color:#be4f48;
 }
 #section-2 .cell:last-child .mes{
+	margin: 0;
 	border:none;
 }
 footer{
+	margin: 0;
 	width: 100%;
 	height: 60px;
 	text-align: center;
 	background-color: black;
 }
 footer .mes ,footer .back{
+	margin: 0;
 	width: 300px;
 	height: 60px;
 	line-height: 60px;
@@ -235,12 +257,15 @@ footer .mes ,footer .back{
 	font-size: 10px;
 }
 footer .mes{
+	margin: 0;
 	float: left;
 }
 footer .back{
+	margin: 0;
 	float: right;
 }
 footer .back a{
+	margin: 0;
 	text-decoration: none;
 	color: #fff;
 	-webkit-transition:color 0.4s ease-in-out;
@@ -248,5 +273,6 @@ footer .back a{
 	transition: color 0.4s ease-in-out;
 }
 footer .back a:hover{
+	margin: 0;
 	color: #75757f;
 }
