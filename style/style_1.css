@@ -7,7 +7,7 @@
 	width: 100%;
 	min-width: 1280px;
 	font-family: 'Microsoft YaHei';
-
+    background-color: #efefef;
 }
 header{
 	width: 100%;
@@ -136,11 +136,18 @@ header .banner-right:hover .move{
 	padding: 20px;
 }
 .passage{
-	background-color:#ccc;
+	background-color: white;
 	margin: 20px auto;
 	padding: 20px;
-	box-shadow: 3px 3px 3px #333;
+	
 	width: 1140px;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.passage:hover{
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #999;
 }
 .passage h2{
 	text-align: left;
