@@ -146,10 +146,10 @@ header .banner-right:hover .move{
 .fnc-slider__slides {
   position: relative;
   height: 100%;
-  -webkit-transition: -webkit-transform 1s 0.66667s;
-  transition: -webkit-transform 1s 0.66667s;
-  transition: transform 1s 0.66667s;
-  transition: transform 1s 0.66667s, -webkit-transform 1s 0.66667s;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s;
+  transition: -webkit-transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s, -webkit-transform 0.66667s 0.66667s;
 }
 .fnc-slider .m--blend-dark .fnc-slide__inner {
   background-image: url(../img/Return0.jpg);
@@ -196,10 +196,10 @@ background-image: url(../img/Saga.jpg);
 }
 .fnc-slide.m--active-slide {
   z-index: 1;
-  -webkit-transition: -webkit-transform 1s 0.66667s ease-in-out;
-  transition: -webkit-transform 1s 0.66667s ease-in-out;
-  transition: transform 1s 0.66667s ease-in-out;
-  transition: transform 1s 0.66667s ease-in-out, -webkit-transform 1s 0.66667s ease-in-out;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s ease-in-out;
+  transition: -webkit-transform 0.66667s 0.66667s ease-in-out;
+  transition: transform 0.66667s 0.66667s ease-in-out;
+  transition: transform 0.66667s 0.66667s ease-in-out, -webkit-transform 10.66667 0.66667s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -219,10 +219,10 @@ background-image: url(../img/Saga.jpg);
           transform: translate3d(-100%, 0, 0);
 }
 .m--active-slide .fnc-slide__inner {
-  -webkit-transition: -webkit-transform 1s 0.66667s ease-in-out;
-  transition: -webkit-transform 1s 0.66667s ease-in-out;
-  transition: transform 1s 0.66667s ease-in-out;
-  transition: transform 1s 0.66667s ease-in-out, -webkit-transform 1s 0.66667s ease-in-out;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s ease-in-out;
+  transition: -webkit-transform 0.66667s 0.66667s ease-in-out;
+  transition: transform 0.66667s 0.66667s ease-in-out;
+  transition: transform 0.66667s 0.66667s ease-in-out, -webkit-transform 0.66667s 0.66667s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -253,18 +253,18 @@ background-image: url(../img/Saga.jpg);
           transform: translateY(100%);
 }
 .m--active-slide .fnc-slide__heading-line {
-  -webkit-transition: -webkit-transform 1.5s 1s;
-  transition: -webkit-transform 1.5s 1s;
-  transition: transform 1.5s 1s;
-  transition: transform 1.5s 1s, -webkit-transform 1.5s 1s;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s;
+  transition: -webkit-transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s, -webkit-transform 0.66667s 0.66667s;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 .m--previous-slide .fnc-slide__heading-line {
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transition: -webkit-transform 0.66667s;
+  transition: -webkit-transform 0.66667s;
+  transition: transform 0.66667s;
+  transition: transform 0.66667s, -webkit-transform 0.66667s;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
@@ -276,18 +276,18 @@ background-image: url(../img/Saga.jpg);
           transform: translateY(-100%);
 }
 .m--active-slide .fnc-slide__heading-line span {
-  -webkit-transition: -webkit-transform 1.5s 1s;
-  transition: -webkit-transform 1.5s 1s;
-  transition: transform 1.5s 1s;
-  transition: transform 1.5s 1s, -webkit-transform 1.5s 1s;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s;
+  transition: -webkit-transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s, -webkit-transform 0.66667s 0.66667s;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 .m--previous-slide .fnc-slide__heading-line span {
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transition: -webkit-transform 0.66667s;
+  transition: -webkit-transform 0.66667s;
+  transition: transform 0.66667s;
+  transition: transform 0.66667s, -webkit-transform 0.66667s;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
@@ -390,10 +390,10 @@ background-image: url(../img/Saga.jpg);
 }
 .fnc-nav__bg.m--active-nav-bg {
   z-index: 1;
-  -webkit-transition: -webkit-transform 1s 0.66667s;
-  transition: -webkit-transform 1s 0.66667s;
-  transition: transform 1s 0.66667s;
-  transition: transform 1s 0.66667s, -webkit-transform 1s 0.66667s;
+  -webkit-transition: -webkit-transform 0.66667s 0.66667s;
+  transition: -webkit-transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s;
+  transition: transform 0.66667s 0.66667s, -webkit-transform 0.66667s 0.66667s;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
