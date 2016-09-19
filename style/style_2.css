@@ -136,7 +136,7 @@ article{
   font-size: 22px;
   position: absolute;
   top: 150px;
-  right: 100px;
+  right: 5%;;
   color: white;
   width: 300px;
 
@@ -242,7 +242,7 @@ background-image: url(../img/Saga.jpg);
 .fnc-slide__content {
   z-index: 2;
   position: absolute;
-  left: 40%;
+  left: 50vmin;
   top: 40%;
 }
 .fnc-slide__heading {
@@ -253,7 +253,7 @@ background-image: url(../img/Saga.jpg);
   overflow: hidden;
   position: relative;
   padding-right: 20px;
-  font-size: 100px;
+  font-size:12vmin;
   color: #fff;
   word-spacing: 10px;
 }
