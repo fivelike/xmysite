@@ -5,7 +5,6 @@
 }
 .container{
   width: 100%;
-  
   font-family: 'Microsoft YaHei';
 }
 header{
@@ -242,7 +241,7 @@ background-image: url(../img/Saga.jpg);
 .fnc-slide__content {
   z-index: 2;
   position: absolute;
-  left: 25vw;
+  right: 26vw;
   top: 40%;
 }
 .fnc-slide__heading {
@@ -378,7 +377,7 @@ background-image: url(../img/Saga.jpg);
 .fnc-nav {
   z-index: 5;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
 }
 .fnc-nav__bgs {
@@ -392,7 +391,7 @@ background-image: url(../img/Saga.jpg);
 }
 .fnc-nav__bg {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   height: 100%;
