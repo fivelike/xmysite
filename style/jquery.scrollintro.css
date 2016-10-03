@@ -1,6 +1,6 @@
 body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #EFEFEF;
+	background: #FFF;
 	margin-top: 24px;
 	margin-bottom: 200px;
 	/*overflow: hidden;*/
@@ -17,7 +17,7 @@ a {
 }
 a:hover {
 	color: #005580;
-	text-decoration: underline;
+	text-decoration: none;
 }
 h3{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
