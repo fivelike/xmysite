@@ -8,7 +8,7 @@ import json
 # partner_id为可选，其值为下载的TOP SDK中的top/api/base.py里的SYSTEM_GENERATE_VERSION
 
 
-def sms_send(appkey:str,secret:str,params:dict,templete_id:str,partner_id = 'taobao-sdk-python-20160607'):
+def sms_send(tel:str,appkey:str,secret:str,params:dict,templete_id:str,partner_id = 'taobao-sdk-python-20160607'):
     url = 'https://eco.taobao.com/router/rest'
     req=AlibabaAliqinFcSmsNumSendRequest(appkey, secret, url,partner_id)
     req.extend=''
@@ -18,7 +18,7 @@ def sms_send(appkey:str,secret:str,params:dict,templete_id:str,partner_id = 'tao
 
     req.sms_param=json.dumps(params)
     print(req.sms_param)
-    req.rec_num= '18292037047'
+    req.rec_num= tel
     req.sms_template_code = templete_id  #短信模板名称
     try:
         resp= req.getResponse()
