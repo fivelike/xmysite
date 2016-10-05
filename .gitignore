@@ -51,4 +51,6 @@ Temporary Items
 *.pyc
 
 # ide xml
-.idea/*.*
+*.xml
+.idea/*
+
