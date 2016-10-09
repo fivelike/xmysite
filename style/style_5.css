@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
-.container{
+.contain{
   width: 100%;
   
   font-family: 'Microsoft YaHei';
@@ -132,3 +132,27 @@ header .banner-right .move{
 header .banner-right:hover .move{
     width: 60%;
 }
+#container * {
+    margin: auto;
+}
+#sidebar h2{
+  text-align: center;
+  font-size: 2vw;
+  margin:1vw 0;
+}
+#sidebar{
+  background-color: white;
+  position: absolute;
+  width: 20vw;
+  height:48vw;
+  top: 4vw;
+  right:8vw;
+  border:2px solid lightgray;
+}
+input{
+  height: 3vw;
+  background-color: red;
+  width: 100%;
+  font-size: 2vw;
+}
+
