@@ -1,4 +1,26 @@
-# 社团主页
+﻿# 社团主页
 
-this is a push test from co-woker shrik3
+## 更新日志：
 
+... =w= ...
+
+__09-19-2016 __
+
+-  封装了发送短信（阿里大于）api的相关函数。 by shrik3
+
+-  字体大小调整 by langjunman
+
+
+__09-20-2016 __
+
+- 优化全站响应式布局 by langjunman
+
+
+__10-01-2016 __
+
+- 完成乐队介绍页面开发 by langjunman
+
+
+__10-03-2016 __
+
+- 开干激动人心的排练室预约功能! by langjunman

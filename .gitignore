@@ -49,3 +49,8 @@ Temporary Items
 
 # python temporary files
 *.pyc
+
+# ide xml
+*.xml
+.idea/*
+

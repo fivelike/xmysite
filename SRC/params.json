@@ -1,0 +1,16 @@
+{
+        "notice1":{
+        "name": "通知全哥",
+        "band": "",
+        "date": "",
+        "start_time": "",
+        "end_time" : "",
+
+    },
+
+    "notice2":{
+        "name": "活动短信",
+        "id": "002",
+        "param2": ""
+    }
+}
