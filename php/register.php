@@ -24,7 +24,7 @@
 
 
 
-    $query = "INSERT INTO accounts (username,nickname,passdw)
+    $query = "INSERT INTO accounts (username,nickname,password)
               VALUES ('$username','$nickname','$password')";
     $result = $db->query($query);
 
