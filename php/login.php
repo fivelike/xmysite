@@ -1,7 +1,6 @@
 <?php
+session_start();
 include 'function.php';
-
-    session_start();
     // print_r($_POST);
 
     $username = trim($_POST['username']);
@@ -18,7 +17,7 @@ include 'function.php';
 
     }
 
-    @ $db = new mysqli('localhost','root','','xmy');
+    @ $db = new mysqli('localhost','test','test','xmy');
     if(mysqli_connect_errno()){
         // echo 'error';
         return show(0,'error');
@@ -45,11 +44,11 @@ include 'function.php';
 
     if($count > 0) {
         // echo "<h1 align=center>LOGIN SUCCESS</h1>";
-        return show(1,'登陆成功啦！');        
         $_SESSION['valid_user'] = $username;
+        return show(1,'登陆成功啦！');
     } else{
         // echo 'AUTH FAILED';
-        return show(0,'该用户不存在！'); 
+        return show(0,'该用户不存在！');
     }
 
 

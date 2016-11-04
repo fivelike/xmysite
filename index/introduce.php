@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!--乐队介绍-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,17 +16,24 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="index.html" target="_self"> 首页</a></li>
-				<li><a href="index_1.html" target="_self"> 最新活动</a></li>
-				<li><a href="index_2.html" target="_self"> 乐队介绍</a></li>
-				<li><a href="index_3.html" target="_self"> 交流版块</a></li>
-				<li><a href="index_4.html" target="_self"> 关于我们</a></li>
-				<li><a href="index_5.html" target="_self"> 排练预约</a></li>
+				<li><a href="index.php" target="_self"> 首页</a></li>
+				<li><a href="events.php" target="_self"> 最新活动</a></li>
+				<li><a href="introduce.php" target="_self"> 乐队介绍</a></li>
+				<li><a href="community.php" target="_self"> 交流版块</a></li>
+				<li><a href="about.php" target="_self"> 关于我们</a></li>
+				<li><a href="reserve.php" target="_self"> 排练预约</a></li>
 				<li class="move"></li>
 			</ul>
 		</nav>
 		<div class="banner-right">
+			<?php if(!isset($_SESSION['valid_user'])){?>
 			<span><a onclick="window.open('login.html','','height=550,width=600,top=100,left=300,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')">登录</a></span>
+			<?php }else{
+			?>
+			<span><a onclick="window.open('userinfo.php','','height=550,width=600,top=100,left=300,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')"><?php echo $_SESSION['valid_user'];?></a></span>
+			<?php
+			}
+			?>
 			<div class="move"></div>
 		</div>
 	</header>
@@ -50,9 +58,9 @@
 						<div class="fnc-slide__heading-line">
 							<span>坚果壳乐队</span>
 						</div>
-						
+
 					</h2>
-					
+
 					<button type="button" class="fnc-slide__action-btn">
 						乐队简介
 						<span data-text="乐队简介">乐队简介</span>
@@ -75,10 +83,10 @@
 						<h2 class="fnc-slide__heading">
 							<div class="fnc-slide__heading-line">
 								<span>Return 0;</span>
-					
+
 							</div>
 						</h2>
-						
+
 						<button type="button" class="fnc-slide__action-btn">
 							乐队简介
 							<span data-text="乐队简介">乐队简介</span>
@@ -93,19 +101,19 @@
 					<div class="fnc-slide__mask">
 						<div class="fnc-slide__mask-inner"></div>
 					</div>
-				
+
 					<article class="introduction m--blend-red">
 						<h2>SAGA乐队</h2>
 						<p>SAGA是一支来自西安电子科技大学的校园乐队。对音乐的喜爱让我们走到了一起，在相互磨合中不断成长。我们爱好广泛，不拘泥于一种风格，多次在高校演出。如今我们已经拥有了自己的原创歌曲。希望能为大家带来精彩演出。</p>
 					</article>
-	
-	
+
+
 					<div class="fnc-slide__content">
 						<h2 class="fnc-slide__heading">
 							<div class="fnc-slide__heading-line">
 								<span>saga乐队</span>
 							</div>
-						
+
 						</h2>
 						<button type="button" class="fnc-slide__action-btn">
 							乐队简介
@@ -132,7 +140,7 @@
 							<div class="fnc-slide__heading-line">
 								<span>奇点乐队</span>
 							</div>
-						
+
 						</h2>
 						<button type="button" class="fnc-slide__action-btn">
 							乐队简介
@@ -171,7 +179,7 @@
 		</nav>
 	</div>
 	<!-- slider end -->
-	
+
 </div>
 
 <script src="../script/jquery2.js"></script>
@@ -179,4 +187,3 @@
 	<script src="../script/jquery2.1.js"></script>
 </body>
 </html>
-

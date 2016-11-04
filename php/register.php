@@ -18,11 +18,11 @@ include 'function.php';
 
     }
 
-    @ $db = new mysqli('localhost','root','','xmy');
+    @ $db = new mysqli('localhost','test','test','xmy');
     if(mysqli_connect_errno()){
         // echo 'error';
         return show(0,'error');
-        
+
         exit;
     }
 
