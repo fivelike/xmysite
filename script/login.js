@@ -35,92 +35,166 @@ function logintab(){
 }
 
 
-//根据参数名获得该参数 pname等于想要的参数名 
-function getParam(pname) { 
-    var params = location.search.substr(1); // 获取参数 平且去掉？ 
-    var ArrParam = params.split('&'); 
-    if (ArrParam.length == 1) { 
-        //只有一个参数的情况 
-        return params.split('=')[1]; 
-    } 
-    else { 
-         //多个参数参数的情况 
-        for (var i = 0; i < ArrParam.length; i++) { 
-            if (ArrParam[i].split('=')[0] == pname) { 
-                return ArrParam[i].split('=')[1]; 
-            } 
-        } 
-    } 
-}  
+// //根据参数名获得该参数 pname等于想要的参数名 
+// function getParam(pname) { 
+//     var params = location.search.substr(1); // 获取参数 平且去掉？ 
+//     var ArrParam = params.split('&'); 
+//     if (ArrParam.length == 1) { 
+//         //只有一个参数的情况 
+//         return params.split('=')[1]; 
+//     } 
+//     else { 
+//          //多个参数参数的情况 
+//         for (var i = 0; i < ArrParam.length; i++) { 
+//             if (ArrParam[i].split('=')[0] == pname) { 
+//                 return ArrParam[i].split('=')[1]; 
+//             } 
+//         } 
+//     } 
+// }  
 
 
-var reMethod = "GET",
-	pwdmin = 6;
+// var reMethod = "GET",
+// 	pwdmin = 6;
 
-$(document).ready(function() {
-
-
-	$('#reg').click(function() {
-
-		if ($('#user').val() == "") {
-			$('#user').focus().css({
-				border: "1px solid red",
-				boxShadow: "0 0 2px red"
-			});
-			$('#userCue').html("<font color='red'><b>×用户名不能为空</b></font>");
-			return false;
-		}
+// $(document).ready(function() {
 
 
+// 	$('#reg').click(function() {
 
-		if ($('#user').val().length < 4 || $('#user').val().length > 16) {
-
-			$('#user').focus().css({
-				border: "1px solid red",
-				boxShadow: "0 0 2px red"
-			});
-			$('#userCue').html("<font color='red'><b>×用户名位4-16字符</b></font>");
-			return false;
-
-		}
-		$.ajax({
-			type: reMethod,
-			url: "/member/ajaxyz.php",
-			data: "uid=" + $("#user").val() + '&temp=' + new Date(),
-			dataType: 'html',
-			success: function(result) {
-
-				if (result.length > 2) {
-					$('#user').focus().css({
-						border: "1px solid red",
-						boxShadow: "0 0 2px red"
-					});$("#userCue").html(result);
-					return false;
-				} else {
-					$('#user').css({
-						border: "1px solid #D7D7D7",
-						boxShadow: "none"
-					});
-				}
-
-			}
-		});
+		// if ($('#user').val() == "") {
+		// 	$('#user').focus().css({
+		// 		border: "1px solid red",
+		// 		boxShadow: "0 0 2px red"
+		// 	});
+		// 	$('#userCue').html("<font color='red'><b>×用户名不能为空</b></font>");
+		// 	return false;
+		// }
 
 
-		if ($('#passwd').val().length < pwdmin) {
-			$('#passwd').focus();
-			$('#userCue').html("<font color='red'><b>×密码不能小于" + pwdmin + "位</b></font>");
-			return false;
-		}
-		if ($('#passwd2').val() != $('#passwd').val()) {
-			$('#passwd2').focus();
-			$('#userCue').html("<font color='red'><b>×两次密码不一致！</b></font>");
-			return false;
-		}
+
+		// if ($('#user').val().length < 4 || $('#user').val().length > 16) {
+
+		// 	$('#user').focus().css({
+		// 		border: "1px solid red",
+		// 		boxShadow: "0 0 2px red"
+		// 	});
+		// 	$('#userCue').html("<font color='red'><b>×用户名位4-16字符</b></font>");
+		// 	return false;
+
+		// }
+		// $.ajax({
+		// 	type: reMethod,
+		// 	url: "/member/ajaxyz.php",
+		// 	data: "uid=" + $("#user").val() + '&temp=' + new Date(),
+		// 	dataType: 'html',
+		// 	success: function(result) {
+
+		// 		if (result.length > 2) {
+		// 			$('#user').focus().css({
+		// 				border: "1px solid red",
+		// 				boxShadow: "0 0 2px red"
+		// 			});$("#userCue").html(result);
+		// 			return false;
+		// 		} else {
+		// 			$('#user').css({
+		// 				border: "1px solid #D7D7D7",
+		// 				boxShadow: "none"
+		// 			});
+		// 		}
+
+		// 	}
+		// });
 
 
-		$('#regUser').submit();
-	});
+		// if ($('#passwd').val().length < pwdmin) {
+		// 	$('#passwd').focus();
+		// 	$('#userCue').html("<font color='red'><b>×密码不能小于" + pwdmin + "位</b></font>");
+		// 	return false;
+		// }
+		// if ($('#passwd2').val() != $('#passwd').val()) {
+		// 	$('#passwd2').focus();
+		// 	$('#userCue').html("<font color='red'><b>×两次密码不一致！</b></font>");
+		// 	return false;
+		// }
+
+
+// 		$('#regUser').submit();
+// 	});
 	
 
-});
+// });
+
+/*
+异步ajax
+@fivelike 
+ */
+
+var login ={
+	check : function(){
+		//获取登陆页面中的用户名和密码
+		var username = $('input[name="username"]').val();
+		var p = $('input[name="p"]').val();
+		if(!username){
+			dialog.error('小学生都知道账号不能为空哦~');
+		}
+		
+		if(!p){
+			dialog.error('幼儿园小朋友都知道密码不能为空。。');
+		}
+		if ($('#passwd2').val() != $('#passwd').val()) {
+			dialog.error('两次输入的密码不一致');
+		}
+		
+		//执行异步请求
+		var url = "../php/login.php";
+		var data = {'username':username,'p':p};
+		$.post(url,data,function(result){
+			if(result.status == 0){
+				return dialog.error(result.message);
+			}
+			if(result.status == 1){
+				//登陆成功后跳转的url待定
+				return dialog.success(result.message);
+
+			}
+		},'JSON');
+	}
+}
+
+var register ={
+	check : function(){
+		//获取注册页面中的用户名和密码
+		var newusername = $('input[name="newusername"]').val();
+		var nickname = $('input[name="nickname"]').val();
+		var passwd = $('input[name="passwd"]').val();
+		
+		if(!newusername){
+			dialog.error('小学生都知道账号不能为空哦~');
+		}
+		if ($('#user').val().length < 4 || $('#user').val().length > 16){
+			dialog.error('用户名位4-16字符');
+		}
+		if(!nickname){
+			dialog.error('给你取个名字吧！');
+		}
+		if(!passwd){
+			dialog.error('幼儿园小朋友都知道密码不能为空。。');
+		}
+		if ($('#passwd').val().length < 6){
+			dialog.error('密码不能小于6位');
+		}
+		//执行异步请求
+		var url = "../php/register.php";
+		var data = {'username':newusername,'nickname':nickname,'passwd':passwd};
+		$.post(url,data,function(result){
+			if(result.status == 0){
+				return dialog.error(result.message);
+			}
+			if(result.status == 1){
+				//登陆成功后跳转的url待定
+				return dialog.success(result.message);
+			}
+		},'JSON');
+	}
+}

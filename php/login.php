@@ -1,12 +1,15 @@
 <?php
+include 'function.php';
 
     session_start();
+    // print_r($_POST);
 
     $username = trim($_POST['username']);
     $password = trim($_POST['p']);
 
     if (!$username||!$password){
-        echo "<h1 align=center>Check your form</h1>";
+        // echo "<h1 align=center>Check your form</h1>";
+        return show(0,'用户名或密码为空');
     }
 
     if (!get_magic_quotes_gpc()){
@@ -15,9 +18,10 @@
 
     }
 
-    @ $db = new mysqli('localhost','root','H','xmy');
+    @ $db = new mysqli('localhost','root','','xmy');
     if(mysqli_connect_errno()){
-        echo 'error';
+        // echo 'error';
+        return show(0,'error');
         exit;
     }
 
@@ -31,7 +35,8 @@
     $result = $db->query($query);
 
     if (!$result) {
-        echo 'failed to query the database';
+        // echo 'failed to query the database';
+        return show(0,'failed to query the database');
         exit;
     }
 
@@ -39,10 +44,12 @@
     $count = $row[0];
 
     if($count > 0) {
-        echo "<h1 align=center>LOGIN SUCCESS</h1>";
+        // echo "<h1 align=center>LOGIN SUCCESS</h1>";
+        return show(1,'登陆成功啦！');        
         $_SESSION['valid_user'] = $username;
     } else{
-        echo 'AUTH FAILED';
+        // echo 'AUTH FAILED';
+        return show(0,'该用户不存在！'); 
     }
 
 

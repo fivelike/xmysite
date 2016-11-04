@@ -5,6 +5,7 @@
 <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="../script/login.js"></script>
 <link href="../style/login2.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 
 
                     <div class="login_form">
-                        <form action="../php/login.php" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0" />
+                        <form name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0" />
                             <input type="hidden" name="to" value="log" />
                             <div class="uinArea" id="uinArea">
                                 <label class="input-tips" for="u">帐号：</label>
@@ -47,7 +48,9 @@
                                 </div>
                             </div>
 
-                            <div style="padding-left:50px;margin-top:20px;"><input type="submit" value="登 录" style="width:150px;" class="button_blue" /></div>
+                            <div style="padding-left:50px;margin-top:20px;"><!-- <input type="button" value="登 录" style="width:150px;" class="button_blue" onclick="login.check()"/> -->
+                            <button class="button_blue" style="width:150px;" type="button" onclick="login.check()">登录</button>
+                            </div>
                         </form>
                     </div>
 
@@ -61,7 +64,7 @@
         <div class="qlogin" id="qlogin" style="display: none; ">
 
             <div class="web_login">
-                <form name="form2" id="regUser" accept-charset="utf-8" action="../php/register.php" method="post">
+                <form name="form2" id="regUser" accept-charset="utf-8"  method="post">
                     <input type="hidden" name="to" value="reg" />
                     <input type="hidden" name="did" value="0" />
                     <ul class="reg_form" id="reg-ul">
@@ -70,7 +73,7 @@
 
                             <label for="user" class="input-tips2">账号：</label>
                             <div class="inputOuter2">
-                                <input type="text" id="user" name="username" maxlength="16" class="inputstyle2" />
+                                <input type="text" id="user" name="newusername" maxlength="16" class="inputstyle2" />
                             </div>
 
                         </li>
@@ -103,7 +106,8 @@
 
                         <li>
                             <div class="inputArea">
-                                <input type="button" id="reg" style="margin-top:10px;margin-left:85px;" class="button_blue" value="          注册          " />
+                               <!--  <input type="button" id="reg" style="margin-top:10px;margin-left:85px;" class="button_blue" value="          注册          " /> -->
+                               <button id="reg" class="button_blue" style="margin-top:10px;margin-left:85px;width:150px;" type="button" onclick="register.check()">注册</button>
                             </div>
 
                         </li>
@@ -118,6 +122,9 @@
         </div>
         <!--注册end-->
     </div>
+<script src="../js/jquery.js"></script>
+<script src="../js/dialog/layer.js"></script>
+<script src="../js/dialog.js"></script>
 
 </body>
 
