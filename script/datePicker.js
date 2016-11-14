@@ -113,6 +113,7 @@ DatePicker.prototype = {
         return y + '年' + (m < 10 ? '0' + m : m) + '月' + (d < 10 ? '0' + d : d) + '日';
     },
 
+//选择预约日期
     selectDate: function(date) {
         this.selectedEle.css('background-color', '').css('color', '');
         if (date.getMonth() === this.date.getMonth()) {
@@ -123,8 +124,21 @@ DatePicker.prototype = {
         } else {
             this.renderByDate(date);
         }
-
         this.date = date;
+                m = this.date.getMonth() + 1,
+                d = this.date.getDate();
+        if (confirm("确定选择"+(m < 10 ? '0' + m : m) + '月' + (d < 10 ? '0' + d : d) + '日'+"排练吗?")) {
+            var action = $(this).attr('href');  
+            var form = $('<form></form>');  
+            form.attr('action', action);  
+            form.attr('method', 'post');  
+            form.attr('target', '_self');  
+            var forminput = $('<input type="text" name="formsubmit" />');  
+            forminput.attr('value', this.date);  
+            form.append(forminput);  
+            form.submit();   
+            return false;  
+        }
     },
 
     renderByDate: function(date) {
